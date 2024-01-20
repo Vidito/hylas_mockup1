@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Hylas</title>
+    <style>
+      .kalam_font {
+        font-family: "Kalam", cursive;
+      }
+    </style>
+  </head>
+
+  <body class="bg-[#F8FAFC] text-[#392738]">
+    <!-- Navbar -->
+    <nav class="p-4 container mx-auto max-w-xl">
+      <div class="flex flex-wrap items-center justify-between">
+        <a href="/"><img src="logo.svg" alt="Logo" class="w-10 h-10" /></a>
+        <div class="p-3 md:hidden">
+          <svg
+            id="menu-button"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6 transition-opacity duration-500 ease-in-out cursor-pointer hover:opacity-[0.5]"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </div>
+        <div id="menu" class="hidden md:block">
+          <ul class="items-center w-screen md:w-auto md:flex">
+            <li
+              class="p-4 text-gray-500 border-b border-gray-600 hover:text-gray-300 md:border-0"
+            >
+              <a href="/create.html">Create</a>
+            </li>
+            <li
+              class="p-4 text-gray-500 border-b border-gray-600 hover:text-gray-300 md:border-0"
+            >
+              <a href="create_subject.html">Subjects</a>
+            </li>
+            <li
+              class="p-4 text-gray-500 border-b border-gray-600 hover:text-gray-300 md:border-0"
+            >
+              <a href="/myai.html">My AI</a>
+            </li>
+            <li id="drp-btn" class="text-gray-500 hover:text-gray-300">
+              <div class="relative inline-flex py-2">
+                <button
+                  type="button"
+                  class="inline-flex items-center px-4 py-2 font-semibold rounded ps-4"
+                >
+                  <span class="pr-[0.25rem]">Dashboard 📑</span>
+                </button>
+                <div
+                  id="drp-list"
+                  class="absolute z-10 hidden mt-2 bg-white rounded-md shadow-lg"
+                >
+                  <a
+                    href="#"
+                    class="block px-4 py-2 text-gray-800 hover:rounded-t"
+                    >Log Out</a
+                  >
+                  <a href="#" class="block px-4 py-2 text-gray-800">My Tasks</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Content is here -->
+    <div class="p-4 container mx-auto max-w-xl">
+      <div>
+        <label for="Subject" class="block text-sm font-medium"
+          >Subject Name</label
+        >
+        <input
+          type="text"
+          id="name"
+          name="Subject"
+          placeholder="Economics 101"
+          class="mt-1 mb-5 p-2 w-full border rounded-md"
+        />
+      </div>
+      <div class="mb-4">
+        <label for="Description" class="block text-sm font-medium"
+          >Description</label
+        >
+        <textarea
+          id="assignmentText"
+          name="Description"
+          rows="4"
+          class="mt-1 p-2 w-full border rounded-md"
+          placeholder="First grade of high school Economics. The textbook is ..."
+        ></textarea>
+      </div>
+      <div>
+        <label class="py-1 px-2 bg-green-800 rounded text-white cursor-pointer">
+          <input type="file" class="hidden" />
+          Upload Syllabus
+        </label>
+      </div>
+      <footer
+        class="text-center text-sm py-3 mt-7 border border-[#F8FAFC] border-t-gray-800"
+      >
+        Hylas 2024
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
